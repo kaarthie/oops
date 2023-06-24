@@ -1,10 +1,10 @@
-package Inheritance;
+package Encapsulation;
 
-public class InheritanceBank {
+public class EncapsulationBank {
     private String accountNumber;
     private double balance;
 
-    public InheritanceBank(String accountNumber, double initialBalance) {
+    public EncapsulationBank(String accountNumber, double initialBalance) {
         this.accountNumber = accountNumber;
         this.balance = initialBalance;
     }
@@ -36,7 +36,7 @@ public class InheritanceBank {
 
 class Main4 {
     public static void main(String[] args) {
-        InheritanceBank account = new InheritanceBank("1234567890", 1000);
+       EncapsulationBank account = new EncapsulationBank("1234567890", 1000);
 
         System.out.println("Account Number: " + account.getAccountNumber());
         System.out.println("Balance: Rs " + account.getBalance());
