@@ -1,6 +1,6 @@
-package Inheritance;
+package Encapsulation;
 
-public class InheritanceEmployee {
+public class EncapsulationEmployee {
     private String name;
     private int age;
     private double salary;
@@ -30,7 +30,7 @@ public class InheritanceEmployee {
 
 class Main {
     public static void main(String[] args) {
-        InheritanceEmployee employee = new InheritanceEmployee();
+        EncapsulationEmployee employee = new EncapsulationEmployee();
         employee.setName("Karthi");
         employee.setAge(21);
         employee.setSalary(20000);
