@@ -1,11 +1,11 @@
-package Inheritance;
+package Encapsulation;
 
-class InheritanceCar {
+class EncapsulationCar {
     private String brand;
     private String model;
     private int year;
 
-    public InheritanceCar(String brand, String model, int year) {
+    public EncapsulationCar(String brand, String model, int year) {
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -33,7 +33,7 @@ class InheritanceCar {
 }
 class Main3 {
     public static void main(String[] args) {
-        InheritanceCar car = new InheritanceCar("Maruthi Suzuki","Swift",2018);
+        EncapsulationCar car = new EncapsulationCar("Maruthi Suzuki","Swift",2018);
 
         System.out.println("Brand: " + car.getBrand());
         System.out.println("Model: " + car.getModel());
