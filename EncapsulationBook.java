@@ -1,11 +1,11 @@
-package Inheritance;
+package Encapsulation;
 
-public class InheritanceBook {
+public class EncapsulationBook {
     private String title;
     private String author;
     private int year;
 
-    public InheritanceBook(String title, String author, int year) {
+    public EncapsulationBook(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
@@ -44,7 +44,7 @@ public class InheritanceBook {
 
 class Main5 {
     public static void main(String[] args) {
-        InheritanceBook book = new InheritanceBook("To Kill a Mockingbird", "Harper Lee", 1960);
+        EncapsulationBook book = new EncapsulationBook("To Kill a Mockingbird", "Harper Lee", 1960);
 
         System.out.println("Original Book Info:");
         book.displayBookInfo();
