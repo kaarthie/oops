@@ -8,31 +8,36 @@ public class Details {
     static List<User> res=new ArrayList<>();
     static List<User> wl=new ArrayList<>();
     public static void addRes(User user){
-        if(res.size()==1){
+        if(res.size()==3){
             putInWL(user);
+            id++;
         }
         else {
             id++;
             res.add(user);
-            System.out.println(user.toString()+ " Booked");
+            System.out.println("\n"+user.toString()+ " --->  Successfully Booked\n");
         }
     }
     public static void cancel(int id) {
-        if (res.size() == 0) System.out.println("No tickets booked in the given id");
+        if (res.size() == 0) System.out.println("\nPlease Enter Valid ID\n");
         else {
-            res.remove(id - 1);
-            res.add(wl.get(1));
-            wl.remove(1);
-            System.out.println("Ticket Cancelled Successfully");
+            if(id<res.size()){
+                res.remove(id - 1);
+                System.out.println("Ticket Cancelled Successfully");
+            }
+            if(wl.size()>0) {
+                res.add(wl.get(0));
+                wl.remove(0);
+            }
         }
     }
 
     private static void putInWL(User user) {
-        if (wl.size() == 1) {
-            System.out.println("Tickets full");
+        if (wl.size() == 3) {
+            System.out.println("\n### TICKETS FULL ###\n");
         } else {
            // System.out.println("You are put in waiting list");
-            System.out.println(user.toString()+" You are put in waiting list");
+            System.out.println("\n"+user.toString()+"--> Put in waiting list\n");
             wl.add(user);
         }
     }
@@ -51,6 +56,6 @@ public class Details {
 
 
     public static void avt() {
-        System.out.println("Available Tickets :\nReserved : "+(1- res.size())+"\nWL : "+(1-wl.size()));
+        System.out.println("Available Tickets : \nReserved --> "+(3- res.size())+"\nWaitingList --> "+(3-wl.size())+"\n");
     }
 }
